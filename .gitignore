@@ -161,3 +161,5 @@ test_guu/
 
 #lto lds
 scripts/module-lto.lds
+
+out
