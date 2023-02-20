@@ -171,6 +171,17 @@ config PWM_FSL_FTM
 	  To compile this driver as a module, choose M here: the module
 	  will be called pwm-fsl-ftm.
 
+config PWM_GP7101
+	tristate "GP7101 PWM support"
+	depends on I2C
+	depends on OF
+	select REGMAP_I2C
+	help
+	  Generic PWM framework driver for GP7101.
+
+	  To compile this driver as a module, choose M here: the module
+	  will be called pwm-gp7101.
+
 config PWM_HIBVT
 	tristate "HiSilicon BVT PWM support"
 	depends on ARCH_HISI || COMPILE_TEST
