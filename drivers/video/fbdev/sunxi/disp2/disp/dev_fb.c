@@ -789,13 +789,6 @@ static int sunxi_fb_blank(int blank_mode, struct fb_info *info)
 	return 0;
 }
 
-static int sunxi_fb_cursor(struct fb_info *info, struct fb_cursor *cursor)
-{
-	__inf("sunxi_fb_cursor\n");
-
-	return 0;
-}
-
 static int sunxi_fb_mmap(struct fb_info *info, struct vm_area_struct *vma)
 {
 	unsigned int off = vma->vm_pgoff << PAGE_SHIFT;
@@ -1320,7 +1313,6 @@ static struct fb_ops dispfb_ops = {
 	.fb_ioctl = sunxi_fb_ioctl,
 	.fb_check_var = sunxi_fb_check_var,
 	.fb_blank = sunxi_fb_blank,
-	.fb_cursor = sunxi_fb_cursor,
 	.fb_mmap = sunxi_fb_mmap,
 #if defined(CONFIG_FB_CONSOLE_SUNXI)
 	.fb_fillrect = cfb_fillrect,
